@@ -3,9 +3,9 @@ import csv
 
 electionDataFiles = ['1','2']
 
+candidate = []
 voterId  = []
 county = []
-candidate = []
 
 
 # Loop through the election data files
@@ -38,6 +38,7 @@ totalVotes = 0
 candidate = {}
 candidateName = ''
 
+#open the combined election file to output the results from combined files
 with open(combinedElectionDataCSV, 'w', newline="") as csvFile:
 
     csvWriter = csv.writer(csvFile, delimiter=',')
@@ -48,13 +49,14 @@ with open(combinedElectionDataCSV, 'w', newline="") as csvFile:
     # Write the zipped lists to a csv
     csvWriter.writerows(cleanCSV)
 
-
+#open the combined election data file
 with open(combinedElectionDataCSV, 'r') as csvFile:
 
     csvReader = csv.reader(csvFile, delimiter=',')
     next(csvReader, None)
 
     for row in csvReader:
+        # calculate the total votes by each candidates
         totalVotes = totalVotes+1
         candidateName = row[2]
         if (candidateName in candidate):
@@ -74,6 +76,7 @@ with open(combinedElectionDataCSV, 'r') as csvFile:
 
     for key,value in candidate.items():
 
+        # percent vote - value divide by totalvotes
         percentVote = '{0:.2f}'.format(((value/totalVotes)*100))
 
         print(key + '             :  ' + str(percentVote) + '%' + '  Votes: (' + str(value) + ')' )

@@ -82,16 +82,20 @@ for filesToCheck in empFiles:
             # Append data from the row
             empId.append(row[0])
 
+            # Split employee full name to first name and last name
             empNameSplit = row[1].split()
             empFirstName.append(empNameSplit[0])
             empLastName.append(empNameSplit[-1])
-            empdateformat = row[2]
 
+            # format DOB to mm/dd/yyyy format
+            empdateformat = row[2]
             empDOB.append(empdateformat[5:7]+'/' + empdateformat[8:] + '/' + empdateformat[:4])
 
+            # for SSN to only display last 4 digit and other digits to *
             empSSNformat = row[3]
             empSSN.append('***' + '-' + '**' + '-' + empSSNformat[7:11])
 
+            #lookup state name to get the state code
             empStateformat = row[4]
 
             if empStateformat in us_state_abbrev:
