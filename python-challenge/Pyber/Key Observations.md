@@ -1,87 +1,37 @@
-## Unit 4 | Assignment - Pandas, Pandas, Pandas
+## Unit 5 | Assignment - The Power of Plots
 
 ## Background
 ## Three observable trends based on the data 
 
-1. Students in charter schools average score and passing rate is higher than district schools
-2. Score and Passing score start to degrade as the size of schools of increased
-3. Students in lower spending range performed better than schools with higher spending range. Correlation between the spending range and academic score
-4. Student academic performance reduced in the higher grades
+he ride sharing bonanza continues! Seeing the success of notable players like Uber and Lyft, you've decided to join a fledgling ride sharing company of your own. In your latest capacity, you'll be acting as Chief Data Strategist for the company. In this role, you'll be expected to offer data-backed guidance on new opportunities for market differentiation.
 
+You've since been given access to the company's complete recordset of rides. This contains information about every active driver and historic ride, including details like city, driver count, individual fares, and city type.
 
-Final report include each of the following:
+Your objective is to build a [Bubble Plot](https://en.wikipedia.org/wiki/Bubble_chart) that showcases the relationship between four key variables:
 
-**District Summary**
+* Average Fare ($) Per City
+* Total Number of Rides Per City
+* Total Number of Drivers Per City
+* City Type (Urban, Suburban, Rural)
 
-* Create a high level snapshot (in table form) of the district's key metrics, including:
-  * Total Schools
-  * Total Students
-  * Total Budget
-  * Average Math Score
-  * Average Reading Score
-  * % Passing Math
-  * % Passing Reading
-  * Overall Passing Rate (Average of the above two)
+In addition, you will be expected to produce the following three pie charts:
 
-**School Summary**
+* % of Total Fares by City Type
+* % of Total Rides by City Type
+* % of Total Drivers by City Type
 
-* Create an overview table that summarizes key metrics about each school, including:
-  * School Name
-  * School Type
-  * Total Students
-  * Total School Budget
-  * Per School Budget
-  * Average Math Score
-  * Average Reading Score
-  * % Passing Math
-  * % Passing Reading
-  * Overall Passing Rate (Average of the above two)
+As final considerations:
 
-**Top Performing Schools (By Passing Rate)**
-
-* Create a table that highlights the top 5 performing schools based on Overall Passing Rate. Include:
-  * School Name
-  * School Type
-  * Total Students
-  * Total School Budget
-  * Per School Budget
-  * Average Math Score
-  * Average Reading Score
-  * % Passing Math
-  * % Passing Reading
-  * Overall Passing Rate (Average of the above two)
-
-**Top Performing Schools (By Passing Rate)**
-
-* Create a table that highlights the bottom 5 performing schools based on Overall Passing Rate. Include all of the same metrics as above.
-
-**Math Scores by Grade**
-
-* Create a table that lists the average Math Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
-
-**Reading Scores by Grade**
-
-* Create a table that lists the average Reading Score for students of each grade level (9th, 10th, 11th, 12th) at each school.
-
-**Scores by School Spending**
-
-* Create a table that breaks down school performances based on average Spending Ranges (Per Student). Use 4 reasonable bins to group school spending. Include in the table each of the following:
-  * Average Math Score
-  * Average Reading Score
-  * % Passing Math
-  * % Passing Reading
-  * Overall Passing Rate (Average of the above two)
-
-**Scores by School Size**
-
-* Repeat the above breakdown, but this time group schools based on a reasonable approximation of school size (Small, Medium, Large).
-
-**Scores by School Type**
-
-* Repeat the above breakdown, but this time group schools based on school type (Charter vs. District).
-
-
-
+* You must use the Pandas Library and the Jupyter Notebook.
+* You must use the Matplotlib and Seaborn libraries.
+* You must include a written description of three observable trends based on the data.
+* You must use proper labeling of your plots, including aspects like: Plot Titles, Axes Labels, Legend Labels, Wedge Percentages, and Wedge Labels.
+* Remember when making your plots to consider aesthetics!
+  * You must stick to the Pyber color scheme (Gold, Light Sky Blue, and Light Coral) in producing your plot and pie charts.
+  * When making your Bubble Plot, experiment with effects like `alpha`, `edgecolor`, and `linewidths`.
+  * When making your Pie Chart, experiment with effects like `shadow`, `startangle`, and `explosion`.
+* You must include an exported markdown version of your Notebook called  `README.md` in your GitHub repository.
+* See [Example Solution](Pyber/Pyber_Example.pdf) for a reference on expected format.
 
 As final considerations:
 
